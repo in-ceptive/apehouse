@@ -24,11 +24,11 @@ import Price from './pages/price';
 import Works from './pages/works';
 import News from './pages/news';
 import NewsSingle from './pages/newsSingle';
-import Create from './pages/create';
-import Create2 from './pages/createEdition';
+import CreateNFT from './pages/createNFT';
+import CreateEdition from './pages/createEdition';
 import Create3 from './pages/create3';
 import Createoption from './pages/createOptions';
-import Auction from './pages/Auction';
+import Feed from './pages/Feed';
 import Activity from './pages/activity';
 import Contact from './pages/contact';
 import ElegantIcons from './pages/elegantIcons';
@@ -89,24 +89,25 @@ const app = () => (
       <Route element={<Home1 />} path="/home1" />
       <Route element={<Home2 />} path="/home2" />
       <Route element={<Explore />} path="/explore" />
-      <Route element={<Explore2 />} path="/explore2" />
+      <Route element={<Explore2 />} path="/art" />
       <Route element={<ExploreOpensea />} path="/exploreOpensea" />
       <Route element={<RankingRedux />} path="/rangking" />
-      <Route element={<Auction />} path="/Auction" />
+      <Route element={<Feed />} path="/feed" />
       <Route element={<Helpcenter />} path="/helpcenter" />
       <Route element={<Colection />} path="/colection/:collectionId" />
       <Route element={<ItemDetailRedux />} path="/ItemDetail/:nftId" />
       <Route element={<AuthorOpensea />} path="/AuthorOpensea" />
       <Route element={<Wallet />} path="/wallet" />
       <Route element={<Login />} path="/login" />
+      <Route element={<Login />} path="/privatesales" />
       <Route element={<LoginTwo />} path="/loginTwo" />
       <Route element={<Register />} path="/register" />
       <Route element={<Price />} path="/price" />
-      <Route element={<Works />} path="/works" />
-      <Route element={<News />} path="/news" />
+      <Route element={<Explore />} path="/curated-conversations" />
+      <Route element={<News />} path="/features" />
       <Route element={<NewsSingle />} path="/news/:postId" />
-      <Route element={<Create />} path="/createNFT" />
-      <Route element={<Create2 />} path="/createEdition" />
+      <Route element={<CreateNFT />} path="/createNFT" />
+      <Route element={<CreateEdition />} path="/createEdition" />
       <Route element={<Create3 />} path="/create3" />
       <Route element={<Createoption />} path="/createOptions" />
       <Route element={<Activity />} path="/activity" />
@@ -118,7 +119,7 @@ const app = () => (
       <Route element={<Alerts />} path="/alerts" />
       <Route element={<Progressbar />} path="/progressbar" />
       <Route element={<Tabs />} path="/tabs" />
-      <Route element={<Minter />} path="/mint" />
+      <Route element={<Minter />} path="/releases" />
     </Routes>
     <ScrollToTopBtn />
   </div>

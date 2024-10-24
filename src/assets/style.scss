@@ -859,6 +859,7 @@ p.lead {
         display: inline-block;
         padding: 30px 6px;
         height: max-content;
+        font-family:"Maginte" ;
         cursor: default;
         .lines{
           position: absolute;
@@ -5229,4 +5230,9 @@ blockquote {
 }
 @media only screen and (max-width: 378px) {
 
+}
+#connectWallet,#create{
+  font-family: "Maginte" !important;
+  letter-spacing: 1px;
+  font-weight: 700;
 }

@@ -321,7 +321,7 @@ const Header = function () {
             <Breakpoint xl>
               <div className='menu'>
                 <div className='navbar-item'>
-                  <NavLink to="/explore2">
+                  <NavLink to="/art">
                     ART
                     <span className='lines'></span>
                   </NavLink>
@@ -370,13 +370,13 @@ const Header = function () {
                   </div>
                 </div> */}
                 <div className='navbar-item'>
-                  <NavLink to="/auction">
+                  <NavLink to="/feed">
                     FEED
                     <span className='lines'></span>
                   </NavLink>
                 </div>
                 <div className='navbar-item'>
-                  <NavLink to="/mint">
+                  <NavLink to="/releases">
                     RELEASES
                     <span className='lines'></span>
                   </NavLink>
@@ -419,14 +419,14 @@ const Header = function () {
                   <div ref={ref3}>
                     <div className="dropdown-custom dropdown-toggle btn"
                       onMouseEnter={handleBtnClick3} onMouseLeave={closeMenu3}>
-                      Curation
+                      CURATION
                       <span className='lines'></span>
                       {openMenu3 && (
                         <div className='item-dropdown'>
                           <div className="dropdown" onClick={closeMenu3}>
-                            <NavLink to="/news">Features</NavLink>
-                            <NavLink to="/works">Curated Conversations</NavLink>
-                            <NavLink to="/login">Private Sales</NavLink>
+                            <NavLink to="/features">Features</NavLink>
+                            <NavLink to="/curated-conversations">Curated Conversations</NavLink>
+                            <NavLink to="/privatesales">Private Sales</NavLink>
                             <NavLink to="/helpcenter">Help Center</NavLink>
                           </div>
                         </div>
@@ -440,15 +440,14 @@ const Header = function () {
 
           <div className='mainside'>
             <div className='connect-wal'>
-              {user == null && <NavLink onClick={() => {
+              {user == null && <input type="button" id="connectWallet" className="btn-main" value="Connect Wallet" onClick={() => {
                 handleWalletConnect();
-              }}> Connect Wallet</NavLink>}
-              {/* {user && user.address && <NavLink onClick={() => {
-                handleWalletDisconnect();
-              }}> Disconnect Wallet</NavLink>} */}
+              }} />}
+
+
             </div>
             {user && user.address && <div className="login" style={{ display: "flex", flexDirection: 'row', justifyContent: "center", alignItems: "center" }}>
-              <NavLink to="/createOptions">Create</NavLink>
+              <NavLink to="/createOptions" id="create">Create</NavLink>
               <div id="de-click-menu-notification" className="de-menu-notification" onClick={() => btn_icon_not(!shownot)} ref={refpopnot}>
                 <div className="d-count">8</div>
                 <i className="fa fa-bell"></i>
@@ -513,15 +512,15 @@ const Header = function () {
                 {showpop &&
                   <div className="popshow">
                     <div className="d-name">
-                      <h4>Monica Lucas</h4>
+                      <h6>Monica Lucas</h6>
                       <span className="name" onClick={() => window.open("", "_self")}>Set display name</span>
                     </div>
                     <div className="d-balance">
-                      <h4>Balance</h4>
+                      <h6>Balance</h6>
                       {user.balance}{user.symbol}
                     </div>
                     <div className="d-wallet">
-                      <h4>My Wallet</h4>
+                      <h6>My Wallet</h6>
                       <span id="wallet" className="d-wallet-address">{user.address}</span>
                       <button id="btn_copy" title="Copy Text">Copy</button>
                     </div>
@@ -558,7 +557,7 @@ const Header = function () {
         </button>
 
       </div>
-    </header>
+    </header >
   );
 }
 export default Header;

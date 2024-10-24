@@ -11,15 +11,15 @@ import api from "../../core/api";
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
-  .mainside{
-    .connect-wal{
-      display: none;
-    }
-    .logout{
-      display: flex;
-      align-items: center;
-    }
-  }
+  // .mainside{
+  //   .connect-wal{
+  //     display: none;
+  //   }
+  //   .logout{
+  //     display: flex;
+  //     align-items: center;
+  //   }
+  // }
 `;
 
 
