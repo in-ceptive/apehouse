@@ -27,50 +27,50 @@ const Card = ({ nft = null, className = 'd-item col-lg-3 col-md-6 col-sm-6 col-x
     return nft.asset ? (
         <div className={className}>
             <div className="nft__item m-0">
-            { nft.item_type === 'single_items' ? (
-             <div className='icontype'><i className="fa fa-bookmark"></i></div>   
-             ) : (  
-             <div className='icontype'><i className="fa fa-shopping-basket"></i></div>
+                {nft.item_type === 'single_items' ? (
+                    <div className='icontype'><i className="fa fa-bookmark"></i></div>
+                ) : (
+                    <div className='icontype'><i className="fa fa-shopping-basket"></i></div>
                 )
-            }
-            {
-                nft.expirationTime !==  nft.listingTime && (
-                    <div className="de_countdown">
-                        <div className="Clock-days">
-                            {timeLeft.humanize()} left
+                }
+                {
+                    nft.expirationTime !== nft.listingTime && (
+                        <div className="de_countdown">
+                            <div className="Clock-days">
+                                {timeLeft.humanize()} left
+                            </div>
                         </div>
-                    </div>
-                )
-            }
+                    )
+                }
                 <div className="author_list_pp">
-                    <span onClick={()=> navigateTo(`${base}/${nft.asset.owner.address}`)}>                                    
-                        <img className="lazy" src={nft.asset.owner.profile_img_url} alt=""/>
+                    <span onClick={() => navigateTo(`${base}/${nft.asset.owner.address}`)}>
+                        <img className="lazy" src={nft.asset.owner.profile_img_url} alt="" />
                         <i className="fa fa-check"></i>
                     </span>
                 </div>
-                <div className="nft__item_wrap" style={{height: `${height}px`}}>
-                <Outer>
-                    <span>
-                        <img onLoad={onImgLoad} src={nft.asset.imagePreviewUrl} className="lazy nft__item_preview" alt=""/>
-                    </span>
-                </Outer>
+                <div className="nft__item_wrap" style={{ height: `${height}px` }}>
+                    <Outer>
+                        <span>
+                            <img onLoad={onImgLoad} src={nft.asset.imagePreviewUrl} className="lazy nft__item_preview" alt="" />
+                        </span>
+                    </Outer>
                 </div>
                 <div className="nft__item_info">
                     <span onClick={() => navigateTo(nft.asset.openseaLink)}>
                         <h4>{nft.asset.name}</h4>
                     </span>
                     <div className="nft__item_price">
-                        {priceLabel} ETH
+                        {priceLabel} APE
                     </div>
                     <div className="nft__item_action">
                         <span onClick={() => navigateTo(nft.asset.openseaLink)}>{nft.side ? 'Buy now or Make offer' : 'Buy now'}</span>
                     </div>
                     <div className="nft__item_like">
                         <span></span>
-                    </div>                           
-                </div> 
+                    </div>
+                </div>
             </div>
-        </div>             
+        </div>
     ) : (<></>);
 };
 
