@@ -12,7 +12,7 @@ const ImageGallery = () => {
       {/* react-photo-gallery */}
       <ImageMosaic
         images={images}
-        handleClick={(e, { index }) => {
+        onClick={(e, { index }) => {
           setCurrentIndex(index);
           setOpen(true);
         }}

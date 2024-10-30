@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Gallery from "react-photo-gallery";
 import GridImage from "./components/GridImage";
 
-const ImageMosaic = ({ images, handleClick }) => (
+const ImageMosaic = ({ images, onClick }) => (
   <div className='gallery-container'>
     <Gallery
       columns={containerWidth => {
@@ -14,7 +14,7 @@ const ImageMosaic = ({ images, handleClick }) => (
 
         return columns;
       }}
-      onClick={handleClick}
+      onClick={onClick}
       photos={images}
       margin={10}
       padding={0}
@@ -34,7 +34,7 @@ ImageMosaic.propTypes = {
       src: PropTypes.string.isRequired
     })
   ),
-  handleClick: PropTypes.func.isRequired
+  onClick: PropTypes.func.isRequired
 };
 
 export default ImageMosaic;

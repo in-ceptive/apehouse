@@ -13,7 +13,7 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyles = createGlobalStyle`
   // .mainside{
   //   .connect-wal{
-  //     display: none;
+  //     display: block;
   //   }
   //   .logout{
   //     display: flex;

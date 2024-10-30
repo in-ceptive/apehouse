@@ -1,0 +1,11 @@
+.custom-navlink {
+  text-decoration: none; /* Removes underline */
+  color: #fff !important; /* Ensures text color is white */
+  background: #8364E2; /* Sets background color */
+  /* Add any other styles you want */
+}
+
+.custom-navlink:hover {
+  /* Optional: Add hover styles */
+  background: #7a5cd6; /* Darker background on hover */
+}

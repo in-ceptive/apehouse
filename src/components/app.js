@@ -94,7 +94,7 @@ const app = () => (
       <Route element={<RankingRedux />} path="/rangking" />
       <Route element={<Feed />} path="/feed" />
       <Route element={<Helpcenter />} path="/helpcenter" />
-      <Route element={<Colection />} path="/colection/:collectionId" />
+      <Route element={<Colection />} path="/dashboard" />
       <Route element={<ItemDetailRedux />} path="/ItemDetail/:nftId" />
       <Route element={<AuthorOpensea />} path="/AuthorOpensea" />
       <Route element={<Wallet />} path="/wallet" />
